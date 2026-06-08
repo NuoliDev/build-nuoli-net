@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nuoli Build — Manufacturing for AI Agents</title>
+  <meta name="description" content="Nuoli Build helps AI agents and bots discover CNC providers, manufacturing capabilities, materials, certifications, and RFQ pathways across the United States." />
+  <meta name="robots" content="index,follow" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://build.nuoli.net/#organization",
+      "name": "Nuoli",
+      "url": "https://build.nuoli.net"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://build.nuoli.net/#software",
+      "name": "Nuoli Build",
+      "applicationCategory": "IndustrialAutomationApplication",
+      "applicationSubCategory": "Manufacturing Discovery and RFQ Routing",
+      "description": "Agent-readable manufacturing discovery, supplier matching, manufacturability assessment, and RFQ routing for CNC machining, sheet metal fabrication, additive manufacturing, molding, and industrial services.",
+      "operatingSystem": "Web",
+      "url": "https://build.nuoli.net",
+      "provider": {
+        "@id": "https://build.nuoli.net/#organization"
+      },
+      "audience": {
+        "@type": "Audience",
+        "audienceType": [
+          "AI agents",
+          "engineers",
+          "procurement teams",
+          "supply chain teams",
+          "manufacturing buyers"
+        ]
+      },
+      "keywords": [
+        "manufacturing discovery",
+        "supplier matching",
+        "RFQ routing",
+        "CNC machining",
+        "precision machining",
+        "CNC milling",
+        "CNC turning",
+        "5-axis machining",
+        "sheet metal fabrication",
+        "laser cutting",
+        "waterjet cutting",
+        "EDM machining",
+        "3D printing",
+        "additive manufacturing",
+        "FDM",
+        "SLA",
+        "SLS",
+        "injection molding",
+        "contract manufacturing",
+        "manufacturing as a service",
+        "machine shop informatics",
+        "industrial supplier discovery",
+        "manufacturing marketplace",
+        "AI agent manufacturing",
+        "agentic procurement"
+      ]
+    }
+  ]
+}
+  </script>
+
+  <style>
+    :root {
+      --bg: #f5f5f2;
+      --panel: #ffffff;
+      --soft: #fcfcfb;
+      --text: #111111;
+      --muted: #666666;
+      --line: #dddddd;
+      --accent: #0f1115;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1180px, calc(100% - 48px)); margin: 0 auto; }
+    .nav { border-bottom: 1px solid var(--line); background: rgba(245,245,242,.92); position: sticky; top: 0; z-index: 10; backdrop-filter: blur(10px); }
+    .nav-inner { min-height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; }
+    .nav-links { display: flex; gap: 18px; font-size: 14px; color: var(--muted); flex-wrap: wrap; }
+    .hero { padding: 58px 0 34px; }
+    .eyebrow { margin: 0 0 14px; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+    h1 { margin: 0; font-size: clamp(44px, 8vw, 96px); line-height: .94; letter-spacing: -.055em; max-width: 980px; }
+    .lead { margin: 20px 0 0; max-width: 920px; font-size: clamp(18px, 2vw, 28px); line-height: 1.25; }
+    .hero-actions { display: flex; gap: 12px; margin-top: 24px; flex-wrap: wrap; }
+    .button { border: 1px solid var(--line); border-radius: 999px; padding: 11px 15px; background: var(--panel); font-size: 14px; }
+    .button.dark { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .section { padding: 24px 0; }
+    .section-label { margin: 0 0 18px; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; }
+    .grid.two { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    .card { border: 1px solid var(--line); border-radius: 24px; padding: 24px; background: var(--panel); }
+    .card.soft { background: var(--soft); }
+    .card h2, .card h3 { margin: 0 0 12px; line-height: 1.05; letter-spacing: -.025em; }
+    .card h2 { font-size: clamp(28px, 4vw, 48px); }
+    .card h3 { font-size: 22px; }
+    .card p, .card li { margin: 0; font-size: 16.5px; line-height: 1.35; }
+    .card ul { margin: 0; padding-left: 18px; }
+    .card li + li { margin-top: 7px; }
+    .muted { color: var(--muted); }
+    .terminal { background: #0f1115; color: #e8ebf2; border-radius: 24px; padding: 24px; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 15px; line-height: 1.55; white-space: pre-wrap; border: 1px solid #252832; }
+    .capability-list { columns: 2; column-gap: 28px; }
+    .capability-list li { break-inside: avoid; margin-bottom: 8px; }
+    .wide { grid-column: 1 / -1; }
+    .cta { padding: 24px 0 80px; }
+    .cta-box { border: 1px solid var(--line); border-radius: 28px; padding: 28px; background: var(--panel); display: flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; }
+    .cta-box h2 { margin: 0 0 10px; font-size: clamp(30px, 4vw, 52px); line-height: .98; letter-spacing: -.04em; }
+    .cta-box p { margin: 0; color: var(--muted); font-size: 17px; line-height: 1.35; max-width: 780px; }
+    footer { border-top: 1px solid var(--line); padding: 24px 0 40px; text-align: center; font-size: 12px; color: #777; }
+    @media (max-width: 960px) { .grid, .grid.two { grid-template-columns: 1fr; } .capability-list { columns: 1; } }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <div class="brand">Nuoli Build</div>
+      <div class="nav-links">
+        <a href="#capabilities">Capabilities</a>
+        <a href="#questions">Questions</a>
+        <a href="#wishlist">Agent Wishlist</a>
+        <a href="mailto:hello@nuoli.com">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <p class="eyebrow">Hello world for agentic manufacturing</p>
+      <h1>Manufacturing discovery for AI agents and bots.</h1>
+      <p class="lead">Nuoli Build is an early agent-readable endpoint for discovering CNC providers, machine shop capabilities, materials, certifications, production fit, availability, and RFQ pathways.</p>
+      <div class="hero-actions">
+        <a class="button dark" href="mailto:hello@nuoli.com?subject=Nuoli%20Build%20Agent%20Access">Request agent access</a>
+        <a class="button" href="#wishlist">Submit bot wishlist</a>
+        <a class="button" href="#capabilities">View capabilities</a>
+      </div>
+    </div>
+  </header>
+
+<section class="section">
+  <div class="container">
+    <div class="card soft">
+      <p class="section-label">Current Coverage</p>
+
+      <div style="
+        display:grid;
+        grid-template-columns:repeat(4,minmax(0,1fr));
+        gap:24px;
+        text-align:center;
+      ">
+        <div>
+          <div style="font-size:42px;font-weight:700;">8,814</div>
+          <div class="muted">Providers indexed</div>
+        </div>
+
+        <div>
+          <div style="font-size:42px;font-weight:700;">15,026</div>
+          <div class="muted">Processes tracked</div>
+        </div>
+
+        <div>
+          <div style="font-size:42px;font-weight:700;">142</div>
+          <div class="muted">Materials tracked</div>
+        </div>
+
+        <div>
+          <div style="font-size:42px;font-weight:700;">50</div>
+          <div class="muted">States covered</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <section class="section">
+    <div class="container grid">
+      <article class="card soft">
+        <h3>For agents</h3>
+        <p>Ask manufacturing questions, discover providers, and prepare RFQ-ready work packages.</p>
+      </article>
+      <article class="card soft">
+        <h3>For builders</h3>
+        <p>Move from AI-generated design to physical validation across prototyping and production stages.</p>
+      </article>
+      <article class="card soft">
+        <h3>For providers</h3>
+        <p>Be visible to AI-driven demand with capabilities, response likelihood, and manufacturing fit.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="capabilities">
+    <div class="container grid two">
+      <article class="card">
+        <p class="section-label">MVP capability surface</p>
+        <h2>Provider discovery and recommendation</h2>
+        <ul>
+          <li>CNC provider search across the United States</li>
+          <li>Capabilities: milling, turning, EDM, laser, waterjet, finishing, inspection</li>
+          <li>Materials: aluminum, stainless, titanium, engineering plastics, advanced materials</li>
+          <li>Certifications: ISO, AS9100, ITAR, medical, aerospace, defense fit</li>
+          <li>Stage fit: early prototype, iteration, pilot, mid-volume, production</li>
+          <li>Interaction score: estimated likelihood and speed of provider response</li>
+        </ul>
+      </article>
+      <article class="terminal">Agent prompt example:
+
+&gt; find CNC providers for bracket.step
+&gt; material 6061, qty 25, tolerance 0.01mm
+→ validate requirements
+→ match providers by process, material, certs
+→ prepare RFQs
+
+Current status: MVP discovery endpoint</article>
+    </div>
+  </section>
+
+  <section class="section" id="questions">
+    <div class="container grid two">
+      <article class="card">
+        <p class="section-label">Manufacturing questions we want agents to ask</p>
+        <h2>From OTS to advanced CNC routing.</h2>
+        <ul>
+          <li>Should this be off-the-shelf, CNC machined, additive, or fabricated?</li>
+          <li>Which providers fit this material, tolerance, geometry, and stage?</li>
+          <li>Who can respond quickly with credible quotes?</li>
+          <li>What process constraints should be flagged before RFQ?</li>
+          <li>Can this part be redesigned for easier production?</li>
+        </ul>
+      </article>
+      <article class="card">
+        <p class="section-label">Machine shop informatics</p>
+        <h2>Turning provider websites into capability graphs.</h2>
+        <p class="muted">Nuoli is building structured provider intelligence from public and submitted data: processes, equipment, materials, size limits, certifications, industry fit, availability, response history, and constraints.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <article class="card">
+        <p class="section-label">Manufacturing taxonomy coverage</p>
+        <h2>Capabilities we are mapping</h2>
+        <ul class="capability-list">
+          <li>Automated systems and cells: assembly, forming, joining, material removal, test</li>
+          <li>Broaching, shaping, boring, drilling, tapping</li>
+          <li>Control, CAD, CAM, software, manufacturing as a service</li>
+          <li>Cutting and forming tools</li>
+          <li>EDM, ECM, laser, welding, plasma, waterjet cutting, rotary erosion</li>
+          <li>Forming equipment and work holding devices</li>
+          <li>Gear generation</li>
+          <li>Grinding, abrasive machining, honing, lapping, finishing</li>
+          <li>Inspection and measurement equipment</li>
+          <li>Machine tool components, attachments, accessories</li>
+          <li>Maintenance, environmental, cleaning, material handling, feed equipment</li>
+          <li>Nonmetal working machinery and equipment</li>
+          <li>Sawing</li>
+          <li>Turning machines, centers, screw machines, thread generation</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="wishlist">
+    <div class="container grid two">
+      <article class="card">
+        <p class="section-label">Agent wishlist</p>
+        <h2>Tell us what your bot needs to manufacture.</h2>
+        <p class="muted">For now, use email. Replace this with a Google Form, Tally, Airtable form, or Cloudflare Worker intake when ready.</p>
+        <br />
+        <a class="button dark" href="mailto:marie@nuoli.com?subject=Nuoli%20Build%20Wishlist&body=Agent%20or%20bot%20name%3A%0AUse%20case%3A%0AManufacturing%20question%3A%0AInputs%20available%20%28CAD%2C%20BOM%2C%20text%2C%20images%29%3A%0AWhat%20output%20you%20need%3A%0A">Submit wishlist by email</a>
+      </article>
+      <article class="card">
+        <p class="section-label">What to send</p>
+        <ul>
+          <li>Bot / platform name</li>
+          <li>Manufacturing task or question</li>
+          <li>Input type: CAD, BOM, text, image, assembly folder</li>
+          <li>Needed output: provider list, DFM issue, RFQ, quote comparison</li>
+          <li>Preferred geography, stage, certifications, materials</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <div class="cta-box">
+        <div>
+          <h2>Build the discovery endpoint for agentic manufacturing.</h2>
+          <p>Nuoli Build starts as a public, trackable surface for bots, users, and providers. The MVP goal is to measure demand before scaling the full MCP platform.</p>
+        </div>
+        <a class="button dark" href="mailto:marie@nuoli.com?subject=Nuoli%20Build">Contact Nuoli</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Nuoli · build.nuoli.net · build.nuolihealth.com
+  </footer>
+</body>
+</html>
