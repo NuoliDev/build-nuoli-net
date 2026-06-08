@@ -1,0 +1,7 @@
+{
+  "name": "Nuoli Build",
+  "description": "Agent-readable manufacturing provider discovery and RFQ routing.",
+  "homepage": "https://build.nuoli.net",
+  "openapi": "https://build.nuoli.net/openapi.json",
+  "mcp": "https://build.nuoli.net/mcp/tools.json"
+}

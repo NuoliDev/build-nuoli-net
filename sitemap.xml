@@ -21,4 +21,12 @@
     <loc>https://build.nuoli.net/mcp/tools.json</loc>
   </url>
 
+  <url>
+    <loc>https://build.nuoli.net/agent.json</loc>
+  </url>
+
+  <url>
+    <loc>https://build.nuoli.net/ai.txt</loc>
+  </url>
+
 </urlset>
