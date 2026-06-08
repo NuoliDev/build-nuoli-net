@@ -1,0 +1,22 @@
+{
+  "name": "Nuoli Manufacturing MCP",
+  "version": "0.1.0",
+  "tools": [
+    {
+      "name": "manufacturing.route_process",
+      "description": "Determine whether a part should be sourced OTS, CNC machined, sheet metal fabricated, 3D printed, molded, or otherwise manufactured."
+    },
+    {
+      "name": "provider.search",
+      "description": "Search providers by process, material, certification, geography, and production stage."
+    },
+    {
+      "name": "provider.compare",
+      "description": "Compare providers across capabilities, certifications, materials, and production fit."
+    },
+    {
+      "name": "rfq.prepare",
+      "description": "Generate a manufacturing RFQ package."
+    }
+  ]
+}

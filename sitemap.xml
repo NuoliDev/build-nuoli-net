@@ -6,11 +6,19 @@
   </url>
 
   <url>
-    <loc>https://build.nuoli.net/providers</loc>
+    <loc>https://build.nuoli.net/providers/</loc>
+  </url>
+
+  <url>
+    <loc>https://build.nuoli.net/capabilities/</loc>
   </url>
 
   <url>
     <loc>https://build.nuoli.net/openapi.json</loc>
+  </url>
+
+  <url>
+    <loc>https://build.nuoli.net/mcp/tools.json</loc>
   </url>
 
 </urlset>
