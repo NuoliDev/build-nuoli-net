@@ -1,18 +1,7 @@
 # Nuoli
 
-Engineering and manufacturing intelligence platform.
+Nuoli gives every part you send out a LivePart: one live record from quote to payment. Buyers and suppliers open it from email, and AI agents and software can work from the same record.
 
-Canonical AI instructions:
-https://build.nuoli.net/ai.md
-
-Machine-readable endpoints:
-https://build.nuoli.net/openapi.json
-https://build.nuoli.net/mcp/tools.json
-
-Website:
-https://www.nuoli.net
-
-Purpose:
-Nuoli helps humans and AI systems discover manufacturing providers, manufacturing capabilities, and project-provider matches.
-
-See ai.md for complete instructions.
+Canonical AI instructions: https://build.nuoli.net/ai.md
+Website: https://www.nuoli.net
+Contact: contact@nuoli.net

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuoli: one record for every part you send out</title>
+  <meta name="description" content="Nuoli gives every machined part a LivePart: one live record from quote to payment, shared by buyers, suppliers and AI agents.">
+  <link rel="canonical" href="https://build.nuoli.net/">
+  <meta property="og:title" content="Nuoli: one record for every part you send out">
+  <meta property="og:description" content="One live record for every part you send out, shared by buyers, suppliers and AI agents.">
+  <meta property="og:url" content="https://build.nuoli.net/">
+  <meta property="og:type" content="website">
+  <link rel="alternate" type="text/markdown" href="/ai.md" title="Nuoli for AI assistants">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://build.nuoli.net/#organization",
+        "name": "Nuoli",
+        "legalName": "Nuoli Health, Inc.",
+        "url": "https://www.nuoli.net",
+        "email": "contact@nuoli.net"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://build.nuoli.net/#software",
+        "name": "Nuoli Build",
+        "applicationCategory": "BusinessApplication",
+        "applicationSubCategory": "Manufacturing RFQ and job records for people and AI agents",
+        "description": "Nuoli gives every machined part a LivePart: one live record from quote to payment, shared by buyers, machine shops and AI agents.",
+        "operatingSystem": "Web",
+        "url": "https://build.nuoli.net",
+        "provider": { "@id": "https://build.nuoli.net/#organization" },
+        "audience": {
+          "@type": "Audience",
+          "audienceType": ["machine shops", "manufacturing buyers", "engineers", "hardware startups", "AI agents"]
+        },
+        "keywords": ["LivePart", "RFQ", "CNC machining", "machine shops", "suppliers", "manufacturing network", "AI agents", "agentic procurement", "US manufacturing"]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <nav class="nav" aria-label="Main">
+    <div class="wrap">
+      <a class="brand" href="/">Nuoli <span>Build</span></a>
+      <ul>
+        <li><a href="/#how">How it works</a></li>
+        <li class="hide-sm"><a href="/#suppliers">Suppliers</a></li>
+        <li class="hide-sm"><a href="/#why">Why Nuoli</a></li>
+        <li><a href="/contact.html">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main">
+    <header class="hero">
+      <div class="wrap">
+        <p class="eyebrow">Nuoli LivePart · for buyers, suppliers and AI</p>
+        <h1>One record for every part you send out.</h1>
+        <p class="lead">Every part gets a <b>LivePart</b>: one live record from quote to payment. Buyers and suppliers open it from a normal email, and AI agents and software can work from the same record.</p>
+        <div class="actions">
+          <a class="button dark" href="mailto:contact@nuoli.net?subject=Let%27s%20talk%20about%20Nuoli">Let's talk</a>
+          <a class="button" href="#suppliers">I'm a supplier</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="section" aria-label="What a LivePart looks like">
+      <div class="wrap demo">
+        <div>
+          <p class="label">What a LivePart looks like</p>
+          <h2>Simple on top. Everything else one tap away.</h2>
+          <ol class="steps" style="margin-top:26px">
+            <li><b>Send one file</b><span>A STEP file and a one-line note. That's it.</span></li>
+            <li><b>Get a LivePart</b><span>The drawing is read, risks are flagged and similar past parts are found.</span></li>
+            <li><b>Quote, make, get paid</b><span>One button shows the next step. Questions, revisions and payment stay on the same record.</span></li>
+          </ol>
+        </div>
+        <figure class="post" style="margin:0" aria-label="Example LivePart for a valve housing">
+          <div class="post-head"><span class="av" aria-hidden="true">n</span><div><b>nuoli</b> <span class="muted">· Job 1042 · Part 03</span><small>2h ago · Seattle, WA</small></div></div>
+          <div class="post-photo"><img src="/images/livepart-valve-housing.jpg" alt="Machined aluminum valve housing" width="526" height="344"><span class="count">1/4</span></div>
+          <p class="post-cap"><b>nuoli</b> Prototype run for a new valve housing. 6061-T6, 250 pcs. Tolerance ±0.005".</p>
+          <ul class="post-chips"><li>Mill</li><li class="flag">2 flags</li><li>4 ops</li><li>92% similar to past parts</li></ul>
+          <div class="post-btn">Review and Quote</div>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="how">
+      <div class="wrap">
+        <p class="label">Today</p>
+        <h2>Sending out a part means emails, calls, lookups, and no memory.</h2>
+        <div class="cols4">
+          <div><h3>Effort</h3><p>Incomplete specs mean every shop asks the same question. Quotes come back in a dozen formats.</p></div>
+          <div><h3>Changes</h3><p>A Rev B gets re-sent to everyone, and nobody is sure who has the latest drawing.</p></div>
+          <div><h3>Outcomes</h3><p>Unclear specs get padded quotes. Wrong-revision parts mean scrap, expediting and late lines.</p></div>
+          <div><h3>Records</h3><p>Certs, first articles and approvals are scattered across inboxes when the audit comes.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <p class="label">The idea</p>
+        <h2>One link. One record. Every update in one place.</h2>
+        <div class="flow" aria-label="Email in, LivePart, email out">
+          <div class="node"><h3>Email in</h3><p>Your request arrives as a link. No login, no new system for shops.</p></div>
+          <span class="arrow" aria-hidden="true">→</span>
+          <div class="node core"><h3>The LivePart</h3><p>Drawing, callouts, questions, quote, check-ins, first article, invoice and payment. One record from quote to reorder.</p></div>
+          <span class="arrow" aria-hidden="true">→</span>
+          <div class="node"><h3>Email out</h3><p>Every update comes back as the same link. Replies land in the part.</p></div>
+        </div>
+        <p class="lead" style="font-size:19px">Your suppliers keep working the way they do today. You get one place where everything about a part stays together.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <p class="label">Who it's for</p>
+        <h2>Built for buyers, suppliers, and the AI and software they use.</h2>
+        <div class="grid" style="margin-top:22px">
+          <article class="card" id="buyers">
+            <h3>Buyers</h3>
+            <ul>
+              <li><b>One record per part.</b> Questions, revisions, status and payment stay together.</li>
+              <li><b>Keep your suppliers.</b> Send to the partners you already trust, or find new US shops that fit.</li>
+              <li><b>Every job in one view.</b> Partner shops and your own cells, side by side.</li>
+            </ul>
+          </article>
+          <article class="card" id="suppliers">
+            <h3>Suppliers</h3>
+            <ul>
+              <li><b>Nothing new to adopt.</b> Open the link from email and reply there, or with your own PDF.</li>
+              <li><b>Clear, complete requests.</b> Fewer calls chasing specs, less guessing priced into quotes.</li>
+              <li><b>A fair process.</b> A small invited group, a decision date, and everyone hears the outcome.</li>
+            </ul>
+          </article>
+          <article class="card" id="software">
+            <h3>AI and software</h3>
+            <ul>
+              <li><b>Agents can buy parts.</b> They send a file and a note; a person approves before anything goes out.</li>
+              <li><b>Partner software connects.</b> ERP, quoting and design tools work from the same record.</li>
+              <li><b>Suppliers still get a normal email.</b> Nothing changes on their side.</li>
+            </ul>
+            <p style="margin-top:14px"><a href="#agents">How agents use it</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap grid two">
+        <article class="card dark">
+          <p class="label">Our promise to members</p>
+          <h2>Shops win when the job is done.</h2>
+          <ul>
+            <li>Shops never see each other's names, bids or prices.</li>
+            <li>Buyers never see a shop's costs or other customers.</li>
+            <li>Members keep their customers. We never route work away from their shops.</li>
+            <li>Status is earned by good work, never bought.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <p class="label">Processes in the network</p>
+          <h2>CNC first, then everything around it.</h2>
+          <ul class="chips" style="margin-top:8px">
+            <li>CNC milling</li><li>CNC turning</li><li>5-axis</li><li>EDM</li><li>Grinding</li><li>Sheet metal</li><li>Laser and waterjet</li><li>Anodize and finishing</li><li>Inspection</li><li>Additive</li><li>Molding</li><li>Assembly</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="audit">
+      <div class="wrap grid two">
+        <div>
+          <p class="label">Quality and compliance</p>
+          <h2>A record for every part, ready for audit.</h2>
+          <p class="muted">When the auditor asks, the answer is on the part, not in someone's inbox.</p>
+        </div>
+        <table class="audit">
+          <caption class="skip">What you need to show, and where it lives in a LivePart</caption>
+          <tr><th scope="row">Revision control</th><td>Which shop got which revision, when, and when they confirmed it</td></tr>
+          <tr><th scope="row">Traceability</th><td>Mill certs, certificate of conformance and packing slip, with the part</td></tr>
+          <tr><th scope="row">First article</th><td>The report checked against current callouts, with your approval</td></tr>
+          <tr><th scope="row">Requirement flowdown</th><td>Quality clauses acknowledged by each shop and their finishers</td></tr>
+          <tr><th scope="row">Access</th><td>Who opened which drawing, and when</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section class="section" id="why">
+      <div class="wrap">
+        <div class="card dark">
+          <p class="label">Distributed manufacturing</p>
+          <h2>Don't accept the status quo.</h2>
+          <p class="muted" style="max-width:760px;font-size:18px">Thousands of US shops can make great parts. The work just doesn't reach them, because sending out a part still runs on email chains, phone calls and expensive platforms. It doesn't have to.</p>
+          <div class="grid" style="margin-top:26px">
+            <div class="why"><b>More qualified jobs</b><span>Right-fit work for suppliers, without huge platform fees or racing to the bottom on price.</span></div>
+            <div class="why"><b>Easy and affordable</b><span>One link, nothing to install. The same simple, repeatable record for every part and every supplier.</span></div>
+            <div class="why"><b>Everybody wins</b><span>Buyers get parts faster, suppliers get work that fits, and Nuoli only earns when the job is done.</span></div>
+          </div>
+          <div class="actions">
+            <a class="button" href="mailto:contact@nuoli.net?subject=Let%27s%20talk%20about%20Nuoli">Let's talk</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="agents" aria-label="For AI agents">
+      <div class="wrap">
+        <p class="label">For AI agents and software</p>
+        <div class="grid two">
+          <article class="card dark">
+            <h2>The same LivePart, without a screen.</h2>
+            <p class="muted">Agents can't make phone calls or chase emails, but they can use a LivePart. Send a part file and a note; a person approves, and the shop gets a normal email.</p>
+            <div class="small-stats">
+              <div><strong>0.6 sec</strong><span>to read a new part</span></div>
+              <div><strong>220K</strong><span>parts precomputed</span></div>
+            </div>
+          </article>
+<pre class="terminal" aria-label="Example agent session"><span class="c"># planning system flags a need</span>
+&gt; new LivePart  bracket.step  "6061-T6, 250 pcs, quotes by Dec 15"
+
+<span class="ok">✓ LivePart ready</span>  · drawing read · 4 ops
+<span class="flag">! 2 flags</span>        · bore vs. anodize · thread depth missing
+→ waiting on a person to confirm 2 sizes
+→ then sent to matched US shops by email</pre>
+        </div>
+        <div style="margin-top:18px">
+          <article class="card">
+            <h3>Building an agent that needs parts made?</h3>
+            <p class="muted">Access is by request while we work with a small group of agent builders.</p>
+            <div class="actions"><a class="button dark" href="mailto:contact@nuoli.net?subject=Nuoli%20Build%20agent%20access&amp;body=Agent%20or%20platform%20name%3A%0AWhat%20you%20need%20made%3A%0AInputs%20you%20have%20(CAD%2C%20BOM%2C%20text%2C%20images)%3A%0AWhat%20you%20need%20back%3A%0A">Request agent access</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© 2026 Nuoli Health, Inc. · Vancouver, Washington</span>
+      <span><a href="#agents">For AI agents</a> · <a href="/contact.html">About</a> · <a href="mailto:contact@nuoli.net">contact@nuoli.net</a> · <a href="https://www.nuoli.net">nuoli.net</a></span>
+    </div>
+  </footer>
+</body>
+</html>

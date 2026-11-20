@@ -1,319 +1,257 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nuoli Build — Manufacturing for AI Agents</title>
-  <meta name="description" content="Nuoli Build helps AI agents and bots discover CNC providers, manufacturing capabilities, materials, certifications, and RFQ pathways across the United States." />
-  <meta name="robots" content="index,follow" />
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://build.nuoli.net/#organization",
-      "name": "Nuoli",
-      "url": "https://build.nuoli.net"
-    },
-    {
-      "@type": "SoftwareApplication",
-      "@id": "https://build.nuoli.net/#software",
-      "name": "Nuoli Build",
-      "applicationCategory": "IndustrialAutomationApplication",
-      "applicationSubCategory": "Manufacturing Discovery and RFQ Routing",
-      "description": "Agent-readable manufacturing discovery, supplier matching, manufacturability assessment, and RFQ routing for CNC machining, sheet metal fabrication, additive manufacturing, molding, and industrial services.",
-      "operatingSystem": "Web",
-      "url": "https://build.nuoli.net",
-      "provider": {
-        "@id": "https://build.nuoli.net/#organization"
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuoli: one record for every part you send out</title>
+  <meta name="description" content="Nuoli gives every machined part a LivePart: one live record from quote to payment, shared by buyers, suppliers and AI agents.">
+  <link rel="canonical" href="https://build.nuoli.net/">
+  <meta property="og:title" content="Nuoli: one record for every part you send out">
+  <meta property="og:description" content="One live record for every part you send out, shared by buyers, suppliers and AI agents.">
+  <meta property="og:url" content="https://build.nuoli.net/">
+  <meta property="og:type" content="website">
+  <link rel="alternate" type="text/markdown" href="/ai.md" title="Nuoli for AI assistants">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&amp;display=swap">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://build.nuoli.net/#organization",
+        "name": "Nuoli",
+        "legalName": "Nuoli Health, Inc.",
+        "url": "https://www.nuoli.net",
+        "email": "contact@nuoli.net"
       },
-      "audience": {
-        "@type": "Audience",
-        "audienceType": [
-          "AI agents",
-          "engineers",
-          "procurement teams",
-          "supply chain teams",
-          "manufacturing buyers"
-        ]
-      },
-      "keywords": [
-        "manufacturing discovery",
-        "supplier matching",
-        "RFQ routing",
-        "CNC machining",
-        "precision machining",
-        "CNC milling",
-        "CNC turning",
-        "5-axis machining",
-        "sheet metal fabrication",
-        "laser cutting",
-        "waterjet cutting",
-        "EDM machining",
-        "3D printing",
-        "additive manufacturing",
-        "FDM",
-        "SLA",
-        "SLS",
-        "injection molding",
-        "contract manufacturing",
-        "manufacturing as a service",
-        "machine shop informatics",
-        "industrial supplier discovery",
-        "manufacturing marketplace",
-        "AI agent manufacturing",
-        "agentic procurement"
-      ]
-    }
-  ]
-}
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://build.nuoli.net/#software",
+        "name": "Nuoli Build",
+        "applicationCategory": "BusinessApplication",
+        "applicationSubCategory": "Manufacturing RFQ and job records for people and AI agents",
+        "description": "Nuoli gives every machined part a LivePart: one live record from quote to payment, shared by buyers, machine shops and AI agents.",
+        "operatingSystem": "Web",
+        "url": "https://build.nuoli.net",
+        "provider": { "@id": "https://build.nuoli.net/#organization" },
+        "audience": {
+          "@type": "Audience",
+          "audienceType": ["machine shops", "manufacturing buyers", "engineers", "hardware startups", "AI agents"]
+        },
+        "keywords": ["LivePart", "RFQ", "CNC machining", "machine shops", "suppliers", "manufacturing network", "AI agents", "agentic procurement", "US manufacturing"]
+      }
+    ]
+  }
   </script>
-
-  <style>
-    :root {
-      --bg: #f5f5f2;
-      --panel: #ffffff;
-      --soft: #fcfcfb;
-      --text: #111111;
-      --muted: #666666;
-      --line: #dddddd;
-      --accent: #0f1115;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Helvetica, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-    }
-    a { color: inherit; text-decoration: none; }
-    .container { width: min(1180px, calc(100% - 48px)); margin: 0 auto; }
-    .nav { border-bottom: 1px solid var(--line); background: rgba(245,245,242,.92); position: sticky; top: 0; z-index: 10; backdrop-filter: blur(10px); }
-    .nav-inner { min-height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-    .brand { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; }
-    .nav-links { display: flex; gap: 18px; font-size: 14px; color: var(--muted); flex-wrap: wrap; }
-    .hero { padding: 58px 0 34px; }
-    .eyebrow { margin: 0 0 14px; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
-    h1 { margin: 0; font-size: clamp(44px, 8vw, 96px); line-height: .94; letter-spacing: -.055em; max-width: 980px; }
-    .lead { margin: 20px 0 0; max-width: 920px; font-size: clamp(18px, 2vw, 28px); line-height: 1.25; }
-    .hero-actions { display: flex; gap: 12px; margin-top: 24px; flex-wrap: wrap; }
-    .button { border: 1px solid var(--line); border-radius: 999px; padding: 11px 15px; background: var(--panel); font-size: 14px; }
-    .button.dark { background: var(--accent); color: #fff; border-color: var(--accent); }
-    .section { padding: 24px 0; }
-    .section-label { margin: 0 0 18px; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
-    .grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; }
-    .grid.two { grid-template-columns: repeat(2, minmax(0,1fr)); }
-    .card { border: 1px solid var(--line); border-radius: 24px; padding: 24px; background: var(--panel); }
-    .card.soft { background: var(--soft); }
-    .card h2, .card h3 { margin: 0 0 12px; line-height: 1.05; letter-spacing: -.025em; }
-    .card h2 { font-size: clamp(28px, 4vw, 48px); }
-    .card h3 { font-size: 22px; }
-    .card p, .card li { margin: 0; font-size: 16.5px; line-height: 1.35; }
-    .card ul { margin: 0; padding-left: 18px; }
-    .card li + li { margin-top: 7px; }
-    .muted { color: var(--muted); }
-    .terminal { background: #0f1115; color: #e8ebf2; border-radius: 24px; padding: 24px; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 15px; line-height: 1.55; white-space: pre-wrap; border: 1px solid #252832; }
-    .capability-list { columns: 2; column-gap: 28px; }
-    .capability-list li { break-inside: avoid; margin-bottom: 8px; }
-    .wide { grid-column: 1 / -1; }
-    .cta { padding: 24px 0 80px; }
-    .cta-box { border: 1px solid var(--line); border-radius: 28px; padding: 28px; background: var(--panel); display: flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; }
-    .cta-box h2 { margin: 0 0 10px; font-size: clamp(30px, 4vw, 52px); line-height: .98; letter-spacing: -.04em; }
-    .cta-box p { margin: 0; color: var(--muted); font-size: 17px; line-height: 1.35; max-width: 780px; }
-    footer { border-top: 1px solid var(--line); padding: 24px 0 40px; text-align: center; font-size: 12px; color: #777; }
-    @media (max-width: 960px) { .grid, .grid.two { grid-template-columns: 1fr; } .capability-list { columns: 1; } }
-  </style>
 </head>
 <body>
-  <nav class="nav">
-    <div class="container nav-inner">
-      <div class="brand">Nuoli Build</div>
-      <div class="nav-links">
-        <a href="#capabilities">Capabilities</a>
-        <a href="#questions">Questions</a>
-        <a href="#wishlist">Agent Wishlist</a>
-        <a href="contact.html">Contact</a>
-      </div>
+  <a class="skip" href="#main"><span data-editor-id="ed-0">Skip to content</span></a>
+
+  <nav class="nav" aria-label="Main">
+    <div class="wrap">
+      <a class="brand" href="/"><span data-editor-id="ed-1">Nuoli </span><span><span data-editor-id="ed-2">Build</span></span></a>
+      <ul>
+        <li><a href="/#how"><span data-editor-id="ed-3">How it works</span></a></li>
+        <li class="hide-sm"><a href="/#suppliers"><span data-editor-id="ed-4">Suppliers</span></a></li>
+        <li class="hide-sm"><a href="/#why"><span data-editor-id="ed-5">Why Nuoli</span></a></li>
+        <li><a href="/contact.html"><span data-editor-id="ed-6">About</span></a></li>
+      </ul>
     </div>
   </nav>
 
-  <header class="hero">
-    <div class="container">
-      <p class="eyebrow">Hello world for agentic manufacturing</p>
-      <h1>Manufacturing discovery for AI agents and bots.</h1>
-      <p class="lead">Nuoli Build is an early agent-readable endpoint for discovering CNC providers, machine shop capabilities, materials, certifications, production fit, availability, and RFQ pathways.</p>
-      <div class="hero-actions">
-        <a class="button dark" href="mailto:hello@nuoli.com?subject=Nuoli%20Build%20Agent%20Access">Request agent access</a>
-        <a class="button" href="#wishlist">Submit bot wishlist</a>
-        <a class="button" href="#capabilities">View capabilities</a>
-      </div>
-    </div>
-  </header>
-
-<section class="section">
-  <div class="container">
-    <div class="card soft">
-      <p class="section-label">Current Coverage</p>
-
-      <div style="
-        display:grid;
-        grid-template-columns:repeat(4,minmax(0,1fr));
-        gap:24px;
-        text-align:center;
-      ">
-        <div>
-          <div style="font-size:42px;font-weight:700;">8,814</div>
-          <div class="muted">Providers indexed</div>
-        </div>
-
-        <div>
-          <div style="font-size:42px;font-weight:700;">15,026</div>
-          <div class="muted">Processes tracked</div>
-        </div>
-
-        <div>
-          <div style="font-size:42px;font-weight:700;">142</div>
-          <div class="muted">Materials tracked</div>
-        </div>
-
-        <div>
-          <div style="font-size:42px;font-weight:700;">50</div>
-          <div class="muted">States covered</div>
+  <main id="main">
+    <header class="hero">
+      <div class="wrap">
+        <p class="eyebrow"><span data-editor-id="ed-7">Nuoli LivePart · for buyers, suppliers and AI</span></p>
+        <h1><span data-editor-id="ed-8">One live record for every part you send out.</span></h1>
+        <p class="lead"><span data-editor-id="ed-9">Every part gets a </span><b><span data-editor-id="ed-10">LivePart</span></b><span data-editor-id="ed-11">: one live record from quote to payment. Buyers and suppliers open it from a normal email, and AI agents and software can work from the same record.</span></p>
+        <div class="actions">
+          <a class="button dark" href="mailto:contact@nuoli.net?subject=Let%27s%20talk%20about%20Nuoli"><span data-editor-id="ed-12">Let's talk</span></a>
+          <a class="button" href="#suppliers"><span data-editor-id="ed-13">I'm a supplier</span></a>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </header>
 
-
-
-  <section class="section">
-    <div class="container grid">
-      <article class="card soft">
-        <h3>For agents</h3>
-        <p>Ask manufacturing questions, discover providers, and prepare RFQ-ready work packages.</p>
-      </article>
-      <article class="card soft">
-        <h3>For builders</h3>
-        <p>Move from AI-generated design to physical validation across prototyping and production stages.</p>
-      </article>
-      <article class="card soft">
-        <h3>For providers</h3>
-        <p>Be visible to AI-driven demand with capabilities, response likelihood, and manufacturing fit.</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="section" id="capabilities">
-    <div class="container grid two">
-      <article class="card">
-        <p class="section-label">MVP capability surface</p>
-        <h2>Provider discovery and recommendation</h2>
-        <ul>
-          <li>CNC provider search across the United States</li>
-          <li>Capabilities: milling, turning, EDM, laser, waterjet, finishing, inspection</li>
-          <li>Materials: aluminum, stainless, titanium, engineering plastics, advanced materials</li>
-          <li>Certifications: ISO, AS9100, ITAR, medical, aerospace, defense fit</li>
-          <li>Stage fit: early prototype, iteration, pilot, mid-volume, production</li>
-          <li>Interaction score: estimated likelihood and speed of provider response</li>
-        </ul>
-      </article>
-      <article class="terminal">Agent prompt example:
-
-&gt; find CNC providers for bracket.step
-&gt; material 6061, qty 25, tolerance 0.01mm
-→ validate requirements
-→ match providers by process, material, certs
-→ prepare RFQs
-
-Current status: MVP discovery endpoint</article>
-    </div>
-  </section>
-
-  <section class="section" id="questions">
-    <div class="container grid two">
-      <article class="card">
-        <p class="section-label">Manufacturing questions we want agents to ask</p>
-        <h2>From OTS to advanced CNC routing.</h2>
-        <ul>
-          <li>Should this be off-the-shelf, CNC machined, additive, or fabricated?</li>
-          <li>Which providers fit this material, tolerance, geometry, and stage?</li>
-          <li>Who can respond quickly with credible quotes?</li>
-          <li>What process constraints should be flagged before RFQ?</li>
-          <li>Can this part be redesigned for easier production?</li>
-        </ul>
-      </article>
-      <article class="card">
-        <p class="section-label">Machine shop informatics</p>
-        <h2>Turning provider websites into capability graphs.</h2>
-        <p class="muted">Nuoli is building structured provider intelligence from public and submitted data: processes, equipment, materials, size limits, certifications, industry fit, availability, response history, and constraints.</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <article class="card">
-        <p class="section-label">Manufacturing taxonomy coverage</p>
-        <h2>Capabilities we are mapping</h2>
-        <ul class="capability-list">
-          <li>Automated systems and cells: assembly, forming, joining, material removal, test</li>
-          <li>Broaching, shaping, boring, drilling, tapping</li>
-          <li>Control, CAD, CAM, software, manufacturing as a service</li>
-          <li>Cutting and forming tools</li>
-          <li>EDM, ECM, laser, welding, plasma, waterjet cutting, rotary erosion</li>
-          <li>Forming equipment and work holding devices</li>
-          <li>Gear generation</li>
-          <li>Grinding, abrasive machining, honing, lapping, finishing</li>
-          <li>Inspection and measurement equipment</li>
-          <li>Machine tool components, attachments, accessories</li>
-          <li>Maintenance, environmental, cleaning, material handling, feed equipment</li>
-          <li>Nonmetal working machinery and equipment</li>
-          <li>Sawing</li>
-          <li>Turning machines, centers, screw machines, thread generation</li>
-        </ul>
-      </article>
-    </div>
-  </section>
-
-  <section class="section" id="wishlist">
-    <div class="container grid two">
-      <article class="card">
-        <p class="section-label">Agent wishlist</p>
-        <h2>Tell us what your bot needs to manufacture.</h2>
-        <p class="muted">For now, use email. Replace this with a Google Form, Tally, Airtable form, or Cloudflare Worker intake when ready.</p>
-        <br />
-        <a class="button dark" href="mailto:marie@nuoli.com?subject=Nuoli%20Build%20Wishlist&body=Agent%20or%20bot%20name%3A%0AUse%20case%3A%0AManufacturing%20question%3A%0AInputs%20available%20%28CAD%2C%20BOM%2C%20text%2C%20images%29%3A%0AWhat%20output%20you%20need%3A%0A">Submit wishlist by email</a>
-      </article>
-      <article class="card">
-        <p class="section-label">What to send</p>
-        <ul>
-          <li>Bot / platform name</li>
-          <li>Manufacturing task or question</li>
-          <li>Input type: CAD, BOM, text, image, assembly folder</li>
-          <li>Needed output: provider list, DFM issue, RFQ, quote comparison</li>
-          <li>Preferred geography, stage, certifications, materials</li>
-        </ul>
-      </article>
-    </div>
-  </section>
-
-  <section class="cta">
-    <div class="container">
-      <div class="cta-box">
+    <section class="section" aria-label="What a LivePart looks like">
+      <div class="wrap demo">
         <div>
-          <h2>Build the discovery endpoint for agentic manufacturing.</h2>
-          <p>Nuoli Build starts as a public, trackable surface for bots, users, and providers. The MVP goal is to measure demand before scaling the full MCP platform.</p>
+          <p class="label"><span data-editor-id="ed-14">What a LivePart looks like</span></p>
+          <h2><span data-editor-id="ed-15">Simple on top. Everything else one tap away.</span></h2>
+          <ol class="steps" style="margin-top:26px">
+            <li><b><span data-editor-id="ed-16">Send one file</span></b><span><span data-editor-id="ed-17">A STEP file and a one-line note. That's it.</span></span></li>
+            <li><b><span data-editor-id="ed-18">Get a LivePart</span></b><span><span data-editor-id="ed-19">The drawing is automatically read, risks are flagged and similar past parts are found.</span></span></li>
+            <li><b><span data-editor-id="ed-20">Quote, make, get paid</span></b><span><span data-editor-id="ed-21">One button shows the next step. Questions, revisions and payment stay on the same record.</span></span></li>
+          </ol>
         </div>
-        <a class="button dark" href="contact.html">Contact Nuoli</a>
+        <figure class="post" style="margin:0" aria-label="Example LivePart for a valve housing">
+          <div class="post-head"><span class="av" aria-hidden="true"><span data-editor-id="ed-22">n</span></span><div><b><span data-editor-id="ed-23">nuoli</span></b> <span class="muted"><span data-editor-id="ed-24">· Job 1042 · Part 03</span></span><small><span data-editor-id="ed-25">2h ago · Seattle, WA</span></small></div></div>
+          <div class="post-photo"><img src="/images/livepart-valve-housing.jpg" alt="Machined aluminum valve housing" width="526" height="344"><span class="count"><span data-editor-id="ed-26">1/4</span></span></div>
+          <p class="post-cap"><b><span data-editor-id="ed-27">nuoli</span></b><span data-editor-id="ed-28"> Prototype run for a new valve housing. 6061-T6, 250 pcs. Tolerance ±0.005".</span></p>
+          <ul class="post-chips"><li><span data-editor-id="ed-29">Mill</span></li><li class="flag"><span data-editor-id="ed-30">2 flags</span></li><li><span data-editor-id="ed-31">4 ops</span></li><li><span data-editor-id="ed-32">92% similar to past parts</span></li></ul>
+          <div class="post-btn"><span data-editor-id="ed-33">Review and Quote</span></div>
+        </figure>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section class="section" id="how">
+      <div class="wrap">
+        <p class="label"><span data-editor-id="ed-34">Today</span></p>
+        <h2><span data-editor-id="ed-35">Sending out a part means emails, calls, lookups, and no memory.</span></h2>
+        <div class="cols4">
+          <div><h3><span data-editor-id="ed-36">Effort</span></h3><p><span data-editor-id="ed-37">Incomplete specs mean every shop asks the same question. Quotes come back in a dozen formats.</span></p></div>
+          <div><h3><span data-editor-id="ed-38">Changes</span></h3><p><span data-editor-id="ed-39">A Rev B gets re-sent to everyone, and nobody is sure who has the latest drawing.</span></p></div>
+          <div><h3><span data-editor-id="ed-40">Outcomes</span></h3><p><span data-editor-id="ed-41">Unclear specs get padded quotes. Wrong-revision parts mean scrap, expediting and late lines.</span></p></div>
+          <div><h3><span data-editor-id="ed-42">Records</span></h3><p><span data-editor-id="ed-43">Certs, first articles and approvals are scattered across inboxes when the audit comes.</span></p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <p class="label"><span data-editor-id="ed-44">The idea</span></p>
+        <h2><span data-editor-id="ed-45">One link. One live record. Every update in one place.</span></h2>
+        <div class="flow" aria-label="Email in, LivePart, email out">
+          <div class="node"><h3><span data-editor-id="ed-46">Email in</span></h3><p><span data-editor-id="ed-47">Your request arrives as a link. No login, no new system for shops.</span></p></div>
+          <span class="arrow" aria-hidden="true"><span data-editor-id="ed-48">→</span></span>
+          <div class="node core"><h3><span data-editor-id="ed-49">The LivePart</span></h3><p><span data-editor-id="ed-50">Drawing, callouts, questions, quote, check-ins, first article, invoice and payment. One record from quote to reorder.</span></p></div>
+          <span class="arrow" aria-hidden="true"><span data-editor-id="ed-51">→</span></span>
+          <div class="node"><h3><span data-editor-id="ed-52">Email out</span></h3><p><span data-editor-id="ed-53">Every update comes back as the same link. Replies land in the part.</span></p></div>
+        </div>
+        <p class="lead" style="font-size:19px"><span data-editor-id="ed-54">Your suppliers keep working the way they do today. You get one place where everything about a part stays together.</span></p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <p class="label"><span data-editor-id="ed-55">Who it's for</span></p>
+        <h2><span data-editor-id="ed-56">Built for buyers, suppliers, and the AI and software they use.</span></h2>
+        <div class="grid" style="margin-top:22px">
+          <article class="card" id="buyers">
+            <h3><span data-editor-id="ed-57">Buyers</span></h3>
+            <ul>
+              <li><b><span data-editor-id="ed-58">One record per part.</span></b><span data-editor-id="ed-59"> Questions, revisions, status and payment stay together.</span></li>
+              <li><b><span data-editor-id="ed-60">Keep your suppliers.</span></b><span data-editor-id="ed-61"> Send to the partners you already trust, or find new US shops that fit.</span></li>
+              <li><b><span data-editor-id="ed-62">Every job in one view.</span></b><span data-editor-id="ed-63">&nbsp;Easy from start to finish.</span></li>
+            </ul>
+          </article>
+          <article class="card" id="suppliers">
+            <h3><span data-editor-id="ed-64">Suppliers</span></h3>
+            <ul>
+              <li><b><span data-editor-id="ed-65">Nothing new to adopt.</span></b><span data-editor-id="ed-66"> Open the link from email and reply there, or with your own PDF.</span></li>
+              <li><b><span data-editor-id="ed-67">Clear, complete requests.</span></b><span data-editor-id="ed-68"> Fewer calls chasing specs, less guessing priced into quotes.</span></li>
+              <li><b><span data-editor-id="ed-69">A low-friction process.</span></b><span data-editor-id="ed-70"> From bid to production. Easy tracking and updates.</span></li>
+            </ul>
+          </article>
+          <article class="card" id="software">
+            <h3><span data-editor-id="ed-71">AI and software</span></h3>
+            <ul>
+              <li><b><span data-editor-id="ed-72">Agents can buy parts.</span></b><span data-editor-id="ed-73"> AI gets an easy way to interact with human businesses.</span></li>
+              <li><b><span data-editor-id="ed-74">Partner software connects.</span></b><span data-editor-id="ed-75"> ERP, quoting and design tools work from the same record.</span></li>
+              <li><b><span data-editor-id="ed-76">Suppliers still get a normal email.</span></b><span data-editor-id="ed-77"> Nothing changes on their side.</span></li>
+            </ul>
+            <p style="margin-top:14px"><a href="#agents"><span data-editor-id="ed-78">How agents use it</span></a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap grid two">
+        <article class="card dark">
+          <p class="label"><span data-editor-id="ed-79">Our promise to members</span></p>
+          <h2><span data-editor-id="ed-80">Shops win when the job is done.</span></h2>
+          <ul>
+            <li><span data-editor-id="ed-81">Shops never see each other's names, bids or prices.</span></li>
+            <li><span data-editor-id="ed-82">Buyers never see a shop's costs or other customers.</span></li>
+            <li><span data-editor-id="ed-83">Members keep their customers. We never route work away from their shops.</span></li>
+            <li><span data-editor-id="ed-84">Status is earned by good work, never bought.</span></li>
+          </ul>
+        </article>
+        <article class="card">
+          <p class="label"><span data-editor-id="ed-85">Processes in the network</span></p>
+          <h2><span data-editor-id="ed-86">Made for manufacturers and their partners</span></h2>
+          <ul class="chips" style="margin-top:8px">
+            <li><span data-editor-id="ed-87">CNC milling</span></li><li><span data-editor-id="ed-88">CNC turning</span></li><li><span data-editor-id="ed-89">5-axis</span></li><li><span data-editor-id="ed-90">EDM</span></li><li><span data-editor-id="ed-91">Grinding</span></li><li><span data-editor-id="ed-92">Sheet metal</span></li><li><span data-editor-id="ed-93">Laser and waterjet</span></li><li><span data-editor-id="ed-94">Anodize and finishing</span></li><li><span data-editor-id="ed-95">Inspection</span></li><li><span data-editor-id="ed-96">Additive</span></li><li><span data-editor-id="ed-97">Molding</span></li><li><span data-editor-id="ed-98">Assembly</span></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="audit">
+      <div class="wrap grid two">
+        <div>
+          <p class="label"><span data-editor-id="ed-99">Quality and compliance</span></p>
+          <h2><span data-editor-id="ed-100">A live record for every part, ready for audit.</span></h2>
+          <p class="muted"><span data-editor-id="ed-101">When the auditor asks, the answer is on the part, not in someone's inbox.</span></p>
+        </div>
+        <table class="audit">
+          <caption class="skip"><span data-editor-id="ed-102">What you need to show, and where it lives in a LivePart</span></caption>
+          <tbody><tr><th scope="row"><span data-editor-id="ed-103">Revision control</span></th><td><span data-editor-id="ed-104">Which shop got which revision, when, and when they confirmed it</span></td></tr>
+          <tr><th scope="row"><span data-editor-id="ed-105">Traceability</span></th><td><span data-editor-id="ed-106">Mill certs, certificate of conformance and packing slip, with the part</span></td></tr>
+          <tr><th scope="row"><span data-editor-id="ed-107">First article</span></th><td><span data-editor-id="ed-108">The report checked against current callouts, with your approval</span></td></tr>
+          <tr><th scope="row"><span data-editor-id="ed-109">Requirement flowdown</span></th><td><span data-editor-id="ed-110">Quality clauses acknowledged by each shop and their finishers</span></td></tr>
+          <tr><th scope="row"><span data-editor-id="ed-111">Access</span></th><td><span data-editor-id="ed-112">Who opened which drawing, and when</span></td></tr>
+        </tbody></table>
+      </div>
+    </section>
+
+    <section class="section" id="why">
+      <div class="wrap">
+        <div class="card dark">
+          <p class="label"><span data-editor-id="ed-113">Distributed manufacturing</span></p>
+          <h2><span data-editor-id="ed-114">Don't accept the status quo.</span></h2>
+          <p class="muted" style="max-width:760px;font-size:18px"><span data-editor-id="ed-115">Thousands of US shops can make great parts. The work just doesn't reach them, because sending out a part still runs on email chains, phone calls and expensive platforms. It doesn't have to.</span></p>
+          <div class="grid" style="margin-top:26px">
+            <div class="why"><b><span data-editor-id="ed-116">More qualified jobs</span></b><span><span data-editor-id="ed-117">Right-fit work for suppliers, without huge platform fees or racing to the bottom on price.</span></span></div>
+            <div class="why"><b><span data-editor-id="ed-118">Easy and affordable</span></b><span><span data-editor-id="ed-119">One link, nothing to install. The same simple, repeatable record for every part and every supplier.</span></span></div>
+            <div class="why"><b><span data-editor-id="ed-120">Everybody wins</span></b><span><span data-editor-id="ed-121">Buyers get parts faster, suppliers get work that fits, and Nuoli only earns when the job is done.</span></span></div>
+          </div>
+          <div class="actions">
+            <a class="button" href="mailto:contact@nuoli.net?subject=Let%27s%20talk%20about%20Nuoli"><span data-editor-id="ed-122">Let's talk</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="agents" aria-label="For AI agents">
+      <div class="wrap">
+        <p class="label"><span data-editor-id="ed-123">For AI agents and software</span></p>
+        <div class="grid two">
+          <article class="card dark">
+            <h2><span data-editor-id="ed-124">The same LivePart, without a screen.</span></h2>
+            <p class="muted"><span data-editor-id="ed-125">Agents can't make phone calls or chase emails, but they can use a LivePart. Send a part file and a note; a person approves, and the shop gets a normal email.</span></p>
+            <div class="small-stats">
+              <div><strong><span data-editor-id="ed-126">0.6 sec</span></strong><span><span data-editor-id="ed-127">to read a new part</span></span></div>
+              <div><strong><span data-editor-id="ed-128">220K</span></strong><span><span data-editor-id="ed-129">parts precomputed</span></span></div>
+            </div>
+          </article>
+<pre class="terminal" aria-label="Example agent session"><span class="c"><span data-editor-id="ed-130"># planning system flags a need</span></span><span data-editor-id="ed-131">
+&gt; new LivePart  bracket.step  "6061-T6, 250 pcs, quotes by Dec 15"
+
+</span><span class="ok"><span data-editor-id="ed-132">✓ LivePart ready</span></span><span data-editor-id="ed-133">  · drawing read · 4 ops
+</span><span class="flag"><span data-editor-id="ed-134">! 2 flags</span></span><span data-editor-id="ed-135">        · bore vs. anodize · thread depth missing
+→ waiting on a person to confirm 2 sizes
+→ then sent to matched US shops by email</span></pre>
+        </div>
+        <div style="margin-top:18px">
+          <article class="card">
+            <h3><span data-editor-id="ed-136">Building an agent that needs parts made?</span></h3>
+            <p class="muted"><span data-editor-id="ed-137">Access is by request while we work with a small group of agent builders.</span></p>
+            <div class="actions"><a class="button dark" href="mailto:contact@nuoli.net?subject=Nuoli%20Build%20agent%20access&amp;body=Agent%20or%20platform%20name%3A%0AWhat%20you%20need%20made%3A%0AInputs%20you%20have%20(CAD%2C%20BOM%2C%20text%2C%20images)%3A%0AWhat%20you%20need%20back%3A%0A"><span data-editor-id="ed-138">Request agent access</span></a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    © 2026 Nuoli · build.nuoli.net · build.nuolihealth.com
+    <div class="wrap">
+      <span><span data-editor-id="ed-139">© 2026 Nuoli Health, Inc. · Vancouver, Washington</span></span>
+      <span><a href="#agents"><span data-editor-id="ed-140">For AI agents</span></a><span data-editor-id="ed-141"> · </span><a href="/contact.html"><span data-editor-id="ed-142">About</span></a><span data-editor-id="ed-143"> · </span><a href="mailto:contact@nuoli.net"><span data-editor-id="ed-144">contact@nuoli.net</span></a><span data-editor-id="ed-145"> · </span><a href="https://www.nuoli.net"><span data-editor-id="ed-146">nuoli.net</span></a></span>
+    </div>
   </footer>
-</body>
-</html>
+
+
+</body></html>

@@ -1,32 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <url>
-    <loc>https://build.nuoli.net/</loc>
-  </url>
-
-  <url>
-    <loc>https://build.nuoli.net/providers/</loc>
-  </url>
-
-  <url>
-    <loc>https://build.nuoli.net/capabilities/</loc>
-  </url>
-
-  <url>
-    <loc>https://build.nuoli.net/openapi.json</loc>
-  </url>
-
-  <url>
-    <loc>https://build.nuoli.net/mcp/tools.json</loc>
-  </url>
-
-  <url>
-    <loc>https://build.nuoli.net/agent.json</loc>
-  </url>
-
-  <url>
-    <loc>https://build.nuoli.net/ai.txt</loc>
-  </url>
-
+  <url><loc>https://build.nuoli.net/</loc><lastmod>2026-11-20</lastmod></url>
+  <url><loc>https://build.nuoli.net/contact.html</loc><lastmod>2026-11-20</lastmod></url>
+  <url><loc>https://build.nuoli.net/ai.md</loc><lastmod>2026-11-20</lastmod></url>
+  <url><loc>https://build.nuoli.net/ai.txt</loc><lastmod>2026-11-20</lastmod></url>
+  <url><loc>https://build.nuoli.net/llms.txt</loc><lastmod>2026-11-20</lastmod></url>
 </urlset>

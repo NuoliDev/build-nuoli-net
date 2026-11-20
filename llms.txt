@@ -1,0 +1,7 @@
+# Nuoli
+
+Nuoli gives every part you send out a LivePart: one live record from quote to payment. Buyers and suppliers open it from email, and AI agents and software can work from the same record.
+
+Canonical AI instructions: https://build.nuoli.net/ai.md
+Website: https://www.nuoli.net
+Contact: contact@nuoli.net
